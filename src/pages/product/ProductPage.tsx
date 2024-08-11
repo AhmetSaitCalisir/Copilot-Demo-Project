@@ -12,7 +12,7 @@ const ProductPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h1>Products</h1>
       <ProductList products={products} />
     </div>

@@ -13,10 +13,16 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 
 import ProductPage from "./pages/product/ProductPage";
 import ProductDetailPage from "./pages/productDetail/ProductDetailPage";
+import App from "./App";
+import NavBar from "./Components/molecules/navBar/NavBar";
 
 const router = createBrowserRouter([
   {
     path: "/",
+    element: <App />,
+  },
+  {
+    path: "/product",
     element: <ProductPage />,
   },
   {
@@ -27,6 +33,7 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
+    <NavBar />
     <RouterProvider router={router} />
   </React.StrictMode>
 );

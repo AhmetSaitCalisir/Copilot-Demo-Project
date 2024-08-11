@@ -1,10 +1,13 @@
 import "./App.css";
-import ProductPage from "./pages/product/ProductPage";
 
 const App = () => {
   return (
-    <div>
-      <ProductPage />
+    <div className="container">
+      <iframe
+        src="https://githubnext.com/projects/copilot-labs"
+        title="Wikipedia"
+        style={{ width: "100%", height: "calc(100vh - 62px)" }}
+      ></iframe>
     </div>
   );
 };
