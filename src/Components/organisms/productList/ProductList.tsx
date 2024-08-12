@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { Product } from "../../types/Product.type";
 import "./ProductList.css";
-import ProductCard from "../molecules/producCard/ProductCard";
+import { IProduct } from "../../../types/Product.type";
+import ProductCard from "../../molecules/productCard/ProductCard";
 
 type IProps = {
-  products: Product[];
+  products: IProduct[];
 };
 
 const ProductList = ({ products }: IProps) => {
@@ -15,6 +15,7 @@ const ProductList = ({ products }: IProps) => {
         return element.scrollHeight;
       });
       const maxNumber = Math.max(...heightList);
+
       Array.from(cards).forEach((card) => {
         (card as HTMLDivElement).style.height = `${maxNumber}px`;
       });
@@ -27,6 +28,7 @@ const ProductList = ({ products }: IProps) => {
       return element.scrollHeight;
     });
     const maxNumber = Math.max(...heightList);
+
     Array.from(cards).forEach((card) => {
       (card as HTMLDivElement).style.height = `${maxNumber}px`;
     });

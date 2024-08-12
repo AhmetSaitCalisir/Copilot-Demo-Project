@@ -21,6 +21,11 @@ const NavBar = () => {
                   Products
                 </a>
               </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/recipe">
+                  Recipes
+                </a>
+              </li>
             </ul>
           </div>
         </div>

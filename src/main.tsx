@@ -15,6 +15,7 @@ import ProductPage from "./pages/product/ProductPage";
 import ProductDetailPage from "./pages/productDetail/ProductDetailPage";
 import App from "./App";
 import NavBar from "./Components/molecules/navBar/NavBar";
+import RecipePage from "./pages/recipe/RecipePage";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: "/product/:productId",
     element: <ProductDetailPage />,
+  },
+  {
+    path: "/recipe",
+    element: <RecipePage />,
   },
 ]);
 

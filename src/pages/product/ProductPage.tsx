@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
-import ProductList from "../../Components/organisms/ProductList";
 import { getProducts } from "../../services/product.service";
-import { Product } from "../../types/Product.type";
 import "./ProductPage.css";
+import { IProduct } from "../../types/Product.type";
+import ProductList from "../../Components/organisms/productList/ProductList";
 
 const ProductPage = () => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useState<IProduct[]>([]);
 
   useEffect(() => {
     getProducts().then((data) => setProducts(data));

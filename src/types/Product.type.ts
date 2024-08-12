@@ -1,5 +1,6 @@
-export type { Product };
-type Product = {
+export type { IProduct, IProductCard };
+
+type IProduct = {
   id: number;
   title: string;
   description: string;
@@ -15,4 +16,11 @@ type Product = {
   thumbnail: string;
   brand: string;
   warrantyInformation: string;
+};
+
+type IProductCard = {
+  thumbnail: string;
+  title: string;
+  description: string;
+  id: number;
 };

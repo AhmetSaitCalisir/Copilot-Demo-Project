@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getProduct } from "../../services/product.service";
-import { Product } from "../../types/Product.type";
 import "./ProductDetailPage.css";
+import { IProduct } from "../../types/Product.type";
 
 const ProductDetailPage = () => {
   const params = useParams();
   const productId = params.productId;
 
-  const [product, setProducts] = useState<Product>({
+  const [product, setProducts] = useState<IProduct>({
     availabilityStatus: "",
     category: "",
     description: "",
@@ -36,7 +36,7 @@ const ProductDetailPage = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container" style={{ paddingBottom: "10px" }}>
       <div className="row" style={{ alignItems: "center" }}>
         <div className="col">
           <h2>

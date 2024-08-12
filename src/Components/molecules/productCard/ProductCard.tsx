@@ -1,14 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import "./ProductCard.css";
+import { IProductCard } from "../../../types/Product.type";
 
-type IProps = {
-  thumbnail: string;
-  title: string;
-  description: string;
-  id: number;
-};
-
-const ProductCard = (props: IProps) => {
+const ProductCard = (props: IProductCard) => {
   const navigate = useNavigate();
 
   const onCardClick = () => {
